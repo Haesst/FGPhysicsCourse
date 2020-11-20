@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class FGPhysicsPlane : MonoBehaviour
@@ -23,7 +21,7 @@ public class FGPhysicsPlane : MonoBehaviour
 
     private void FixedUpdate()
     {
-        UpdateSpheres();
+        UpdateSpheres(); // Called spheres since that's the only shape I'm using
     }
 
     private void UpdateSpheres()
@@ -60,7 +58,6 @@ public class FGPhysicsPlane : MonoBehaviour
             return false;
 
         return Distance(body) >= 0f || Mathf.Abs(Distance(body)) <= body.Radius;
-        throw new NotImplementedException();
     }
 
     private bool WillBeCollision(FGPhysicsBody body)

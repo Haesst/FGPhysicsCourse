@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class FGPhysicsBody : MonoBehaviour
@@ -75,8 +73,8 @@ public class FGPhysicsBody : MonoBehaviour
             totalForce = force;
         }
 
-        // f = m * a
-        // a = f / m
+        // force = mass * acceleration
+        // acceleration = force / mass
         Vector3 acc = totalForce / m_Mass;
         Integrate(acc);
     }
